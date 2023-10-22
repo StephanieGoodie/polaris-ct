@@ -15,17 +15,28 @@
       font-family: sans-serif;
       background-color: #ededed;
     }
-
+box{
+  border: auto;
+  background-color: aliceblue;
+}
+.po{
+  max-width: 0 auto;
+      margin: 0 auto;
+      border: 1px solid #e6e6e6;
+      background-color: #e6e6e6;
+      padding: 16px;
+      display: flex;
+}
   </style>
   <title>polaris-chip</title>
 </head>
 
 <body>
-  <box><polaris-chip name = "CtaButton"></polaris-chip></box>
+  <div class="po"><polaris-chip name = "CtaButton"></polaris-chip>
   <polaris-chip name = "CtaButton"></polaris-chip>
   <polaris-chip name = "CtaButton"></polaris-chip>
   <polaris-chip name = "CtaButton"></polaris-chip>
-  <polaris-chip name = "CtaButton"></polaris-chip>
+  <polaris-chip name = "CtaButton"></polaris-chip></div>
 
   <script type="module" src="./src/polaris-chip.js"></script>
 </body>

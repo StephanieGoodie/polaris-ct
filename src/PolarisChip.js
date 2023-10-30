@@ -6,15 +6,16 @@ export class PolarisChip extends LitElement {
       name: { type: String },
       link: { type: String },
       class: {type: String},
+      hover: {type: Boolean, reflect: true },
       primaryOutlined: {
         type: Boolean,
         reflect: true,
-        attribute: "primary-outlined",
+       // attribute: "primary-outlined",
       },
       primaryFilled: {
         type: Boolean,
         reflect: true,
-        attribute: "primary-filled",
+        //attribute: "primary-filled",
       },
       tinted: {
         type: Boolean,
@@ -23,12 +24,12 @@ export class PolarisChip extends LitElement {
       lightOutlined: {
         type: Boolean,
         reflect: true,
-        attribute: "light-outlined",
+        //attribute: "light-outlined",
       },
       lightFilled: {
         type: Boolean,
         reflect: true,
-        attribute: "light-filled",
+        //attribute: "light-filled",
       },
     };
   }
@@ -38,69 +39,142 @@ export class PolarisChip extends LitElement {
       :host {
         display: inline-block;
         margin: 0 12px 12px 0;
+        margin-top: 35px;
+        padding-left: 9px;
+        
       }
 
       .wrapper {
-      display: flex; /* Use Flexbox to fully wrap the elements */
-      align-items: center; /* Vertically center the elements */
-      padding-inline: 8px 4px;
+        padding: 18px 9px;
+        border: 2px solid;
+        border-radius: 3px;
       color: #00ff51;
     }
-
-
-      :host([primaryOutlined]) .wrapper,
-      :host([primaryFilled]) .wrapper {
-        background-color: #b4a0a0;
+/**.link,
+      :host([active]) .link { 
+        background-color : #e4e5e7;
+        border: 2px solid #e4e5ef;
+        border-radius: 2px;
+        color: #005fa9;
+        cursor: pointer;
       }
 
-      :host([tinted]) .wrapper {
-        background-color: #e4e5e7;
-      }
-
-      .link{
+      .link:hover,
+      :host([placebo]) .link { 
+        background-color : #1fb61f;
+        border: 2px solid #21b11c;
+        border-radius: 2px;
+        color: #005fa9;
+        cursor: pointer;
+      } */
+.link{
         font-weight: bold;
         text-decoration: none;
         padding: 8px 4px;
         border: 2px solid;
         border-radius: 3px;
-        font-size: 16px;
+        font-size: 28px;
       }
-
-      .link:focus {
+.link:hover{
+        background-color : #e4e5e7;
+        border: 2px solid #e4e5ef;
+        border-radius: 2px;
+        color: #005fa9;
+        cursor: pointer;
+      }
+.link:focus {
         background-color: #45637c;
         border: 2px solid #45637c;
         border-radius: 3px;
         color: #cce9ff;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
         cursor: pointer;
       }
-      .link:host([primaryFilled]){
+
+      .link,
+      :host([tinted]) .link {
+        background-color: #45627c;
+        border: 2px solid #45637c;
+        border-radius: 3px;
+        color: #cce9ff;
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .link,
+      :host([lightOutlined]) .link {
+        background-color: #001e44;
+        border: 2px solid #eff0ff;
+        border-radius: 3px;
+        color: #cce9ff;
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .link,
+      :host([lightFilled]) .link {
+        background-color: #cce9ff;
+        border: 2px solid #cce9ff;
+        border-radius: 3px;
+        color: #001e44;
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      
+      
+      .link,
+      :host([primaryOutlined]) .link{ 
+        background-color: transparent;
+        border: 2px solid #005fa9;
+        border-radius: 3px;
+        color: #005fa9;
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      
+      :host([primaryOutlined]:hover) .link {
+  background-color: #005fa9;
+  border: 2px solid #005fa9;
+  border-radius: 3px;
+  color: #e5e9ec;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+      }
+      :host([primaryOutlined]:focus) .link {
+  background-color: #063d4e;
+  border: 2px solid #063d4e;
+  border-radius: 3px;
+  color: #e5e9ec;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;}
+
+
+      .link,
+      :host([primaryFilled]) .link{
         background-color: #005fa9;
         border: 2px solid #005fa9;
         border-radius: 3px;
         color: #ededed;
-        font-size: 16px;
+        font-size: 25px;
         font-weight: bold;
         cursor: pointer;
       }
-      .link,
-      :host([primaryOutlined]).link {
-        font-weight: bold;
-        text-decoration: none;
-        padding: 8px 4px;
-        border: 2px solid #3681bb;
-        border-radius: 3px;
-        color: #3681bb;
-        font-size: 16px;
-      }
+      
 
       span {
         padding: 8px 4px;
         border: 2px solid #3681bb;
         border-radius: 5px;
         color: #fff;
-        font-size: 16px;
+        font-size: 20px;
       }
     `;
   }
@@ -113,6 +187,6 @@ export class PolarisChip extends LitElement {
   }
 
   render() {
-    return html`<a class="${this.class}" href="${this.link}"><slot>${this.name}</slot></a>`;
+    return html`<a class="link" href="${this.link}"><slot>${this.name}</slot></a>`;
   }
 }

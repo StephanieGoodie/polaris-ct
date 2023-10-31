@@ -29,7 +29,7 @@
     .button-containertt{
       margin: 2px;
       display: inline-block;
-      background-color: rgb(210, 211, 216);
+      background-color: #b0b0b3;
       border: 50px 8px;
       border-radius: 5px;
       width: 150px;
@@ -48,14 +48,11 @@
     .demo{
       display:flex; /* Use Flexbox for the demo container */
       align-items: center; /* Vertically center content */
-      margin: 2px;
+      margin: 10px;
       padding-left:30px;
-      border-top: 8px solid;
-      border-bottom: 16px solid;
-      border-color: #001e44;
-      background-image:url(" https://t3.ftcdn.net/jpg/03/47/96/64/240_F_347966481_NueWis5sSmEHmLlaPk2USH3aUOKF52VI.jpg");
+      background-color: #fff;
       width: 700px;
-      height: 200px;
+      height: 150px;
       font-size: 30px;
       font-weight: bold;
       color: #3f4041;
@@ -73,27 +70,27 @@
 </head>
 
 <body>
-  <div class="button-container">
-    <polaris-chip name="CtaButton" primaryOutlined></polaris-chip>
-  </div>
-  <div class="button-container">
-    <polaris-chip name="CtaButton" primaryFilled></polaris-chip>
-  </div>
-  <div class="button-containertt">
-    <polaris-chip name="CtaButton" tinted></polaris-chip>
-  </div>
-  <div class="button-container-light">
-    <polaris-chip name="CtaButton" lightOutlined></polaris-chip>
-  </div>
-  <div class="button-container-light">
-    <polaris-chip name="CtaButton" lightFilled></polaris-chip>
-  </div>
-
+  
 <div class = "demo">
 Get the News by Email
   <tb><polaris-chip name="Subscribe>" primaryOutlined ></polaris-chip></tb>
 </div>
-
+<div class = "demo">
+  Get the News by Email
+    <tb><polaris-chip name="Subscribe>" primaryFilled ></polaris-chip></tb>
+</div>
+<div class = "demo" style ="background-color:rgb(210, 211, 216); color: #fff">
+  Get the News by Email
+    <tb><polaris-chip name="Subscribe>" tinted ></polaris-chip></tb>
+</div>
+<div class = "demo" style="background-color: #001E44; color: #fff;" >
+  Get the News by Email
+    <tb><polaris-chip name="Subscribe>" lightOutlined ></polaris-chip></tb>
+</div>
+<div class = "demo" style="background-color: #001E44; color: #fff " >
+  Get the News by Email
+    <tb><polaris-chip name="Subscribe>" lightFilled ></polaris-chip></tb>
+</div>
   <script type="module" src="./src/polaris-chip.js"></script>
 </body>
 

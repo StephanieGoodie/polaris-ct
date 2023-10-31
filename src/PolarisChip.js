@@ -102,6 +102,24 @@ export class PolarisChip extends LitElement {
         font-weight: bold;
         cursor: pointer;
       }
+      :host([tinted]:hover) .link {
+  background-color: #216a7c;
+  border: 2px solid #005fa9;
+  border-radius: 3px;
+  color: #e5e9ec;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+      }
+      :host([tinted]:focus) .link {
+  background-color: #063d4e;
+  border: 2px solid #063d4e;
+  border-radius: 3px;
+  color: #e5e9ec;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;}
+
 
       .link,
       :host([lightOutlined]) .link {
@@ -113,6 +131,23 @@ export class PolarisChip extends LitElement {
         font-weight: bold;
         cursor: pointer;
       }
+      :host([lightOutlined]:hover) .link {
+  background-color: #005fa9;
+  border: 2px solid #005fa9;
+  border-radius: 3px;
+  color: #e5e9ec;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+      }
+      :host([lightOutlined]:focus) .link {
+  background-color: #063d4e;
+  border: 2px solid #063d4e;
+  border-radius: 3px;
+  color: #e5e9ec;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;}
 
       .link,
       :host([lightFilled]) .link {
@@ -124,7 +159,23 @@ export class PolarisChip extends LitElement {
         font-weight: bold;
         cursor: pointer;
       }
-
+      :host([lightFilled]:hover) .link {
+  background-color: #005fa9;
+  border: 2px solid #005fa9;
+  border-radius: 3px;
+  color: #e5e9ec;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+      }
+      :host([lightFilled]:focus) .link {
+  background-color: #063d4e;
+  border: 2px solid #063d4e;
+  border-radius: 3px;
+  color: #e5e9ec;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;}
       
       
       .link,
@@ -167,6 +218,24 @@ export class PolarisChip extends LitElement {
         font-weight: bold;
         cursor: pointer;
       }
+      :host([primaryFilled]:hover) .link {
+        background-color: transparent;
+        border: 2px solid #005fa9;
+        border-radius: 3px;
+        color: #005fa9;
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      :host([primaryFilled]:focus) .link {
+  background-color: #063d4e;
+  border: 2px solid #063d4e;
+  border-radius: 3px;
+  color: #e5e9ec;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;}
       
 
       span {
